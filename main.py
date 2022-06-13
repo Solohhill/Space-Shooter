@@ -29,11 +29,15 @@ def main():
     FPS = 60
     clock = pygame.time.Clock()
 
+    def redraw_window():
+        WIN.blit(BG, (0, 0))
+        pygame.display.update()
+
     while run:
         clock.tick(FPS)
 
-        for event in pygame.even.get():
+        for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
 
-        
+main()        
