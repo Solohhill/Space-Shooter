@@ -22,4 +22,18 @@ BLUE_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_blue.png"))
 YELLOW_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_yellow.png"))
 
  # Background
-BG = RED_LASER = pygame.image.load(os.path.join("assets", "background-black.png"))
+BG = pygame.image.load(os.path.join("assets", "background-black.png"))
+
+def main():
+    run = True
+    FPS = 60
+    clock = pygame.time.Clock()
+
+    while run:
+        clock.tick(FPS)
+
+        for event in pygame.even.get():
+            if event.type == pygame.QUIT:
+                run = False
+
+        
