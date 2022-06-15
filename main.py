@@ -71,12 +71,14 @@ def main():
                 run = False
 
         keys = pygame.key.get_pressed()
-        if keys[pygame.k_a]: #left
+        if keys[pygame.K_a]: #left
             ship.x -= player_vel
         if keys[pygame.K_d]: #right
             ship.x += player_vel
         if keys[pygame.K_w]: #up
-            ship.x 
+            ship.y -= player_vel
+        if keys[pygame.K_s]: #down
+                ship.y += player_vel
         
             
 
